@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Denuncias</title>
+    <link rel="shortcut icon" href="favicons/icons8-erro-16.png" type="image/x-icon">
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        #msg {
+            width: 70%;
+            height: 190px;
+            padding: 5px;
+            font-size: 16px;
+            box-sizing: border-box;
+            box-shadow: 2px 2px 1px rgba(118, 104, 104, 0.24);
+        }
+
+        input {
+            margin-top: 20px;
+            color: white;
+            background-color: #4CE04F;
+            padding: 10px;
+            box-shadow: 2px 2px 1px rgba(118, 104, 104, 0.24);
+        }
+
+        p {
+           padding-top: 20px;
+        }
+
+        a {
+            text-decoration: none;
+            color: black;
+            background-color: rgba(190, 202, 202, 0.281);
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    
+    <form id="dados">
+        <h1>Denúncias</h1>
+        
+         <textarea name="mensagem" id="msg"></textarea>
+        
+         <br>
+
+         <input type="button" value="Enviar" onclick="armaz()";>
+         <input type="reset" value="Limpar" onclick="limpar()">
+
+        <p>Pedimos que nos dê detalhes em relação ao <strong>dia, hora e local</strong> de onde o <strong>lixo</strong> foi descartado de forma irregular.</p>
+
+         <p> As <strong>denúncias são anônimas</strong> e garantimos a integridade da sua imagem. Agradecemos sua ajuda para <strong>salvar nosso planeta</strong>.<p>
+        
+         <h5><a href="index.html">Voltar Para Página Principal</a></h5>
+        
+    </form>
+      
+     <script>
+        function armaz() {
+        var denuncia = document.getElementById('msg').value;
+        localStorage.setItem('dados', denuncia);
+        //alert(`${msg.value}`)
+        }
+
+        function limpar() {
+            document.getElementById('dados').reset();
+        }
+     </script>
+</body>
+</html>
