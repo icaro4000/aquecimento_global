@@ -1,30 +1,37 @@
-@charset "UTF-8";
+/*@charset "UTF-8";
+
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
+}
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: #4ce04e38;
+    background-color: #5c6c5c29;
+    overflow-x: hidden;
 }
 
 header {
     font-size: 13px;
+    padding-top: 40px;
     text-align: center;
-    padding: 15px;
-    margin: -8px;
     background-image: linear-gradient(to bottom, #87E04C, #26aa4b);
     color: white;
-    box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.248);
-    text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.449);
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.248);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.449);
+    min-height: 60px;
+    margin-right: -60px;
 }
 
 main {
    background-color: white;
-    margin-top: 35px;
    text-indent: 15px;
    text-align: justify;
    min-width: 400px;
    max-width: 800px;
    margin: auto;
-   padding: 0px 8px;
+   margin-top: -16px;
+   padding: 0px 16px;
    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.122);
 }
 
@@ -43,5 +50,79 @@ main picture img {
     display: block;
     margin: auto;
     text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}*/
+
+@charset "UTF-8";
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Inclui bordas e padding na largura total dos elementos */
+    font-family: Arial, Helvetica, sans-serif;
 }
 
+body {
+    background-color: #5c6c5c29;
+    overflow-x: hidden; /* Evita scroll horizontal */
+    margin: auto;
+}
+
+header {
+    font-size: 13px;
+    padding-top: 40px;
+    padding-bottom: 10px; /* Adiciona um padding inferior */
+    text-align: center;
+    background-image: linear-gradient(to bottom, #87E04C, #26aa4b);
+    color: white;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.248);
+    text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.449);
+    min-height: 60px;
+    margin-bottom: 20px; /* Espaço entre o header e o próximo elemento */
+    margin-right: -40px;
+}
+
+header h1 {
+    padding-bottom: 15px;
+}
+
+main {
+    background-color: white;
+    text-indent: 15px;
+    text-align: justify;
+    min-width: 400px;
+    max-width: 800px;
+    margin: auto;
+    margin-top: -16px;
+    padding: 16px; /* Uniformiza o padding interno */
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.122);
+}
+
+main h2 {
+    background-image: linear-gradient(to right, #26aa4b44, #87e04c56);
+    color: #36553f;
+    padding: 5px;
+    margin: 15px 0; /* Remove margens negativas e ajusta */
+}
+
+main p {
+    font-size: 17.5px;
+}
+
+main picture img {
+    display: block;
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do container */
+    height: auto; /* Mantém a proporção da imagem */
+    margin: 20px auto; /* Centraliza e dá espaço uniforme acima e abaixo */
+}
+
+footer {
+    font-size: 10px;
+    text-align: end;
+}
+
+footer a {
+    color: black;
+    text-decoration: none;
+}
